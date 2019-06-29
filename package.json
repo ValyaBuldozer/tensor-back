@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/mysql": "^2.15.6",
+    "@types/node": "^12.0.10",
+    "@types/uuid": "^3.4.4",
+    "@types/websocket": "0.0.40",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "ts-node": "^8.3.0",
+    "uuid": "^3.3.2",
+    "websocket": "^1.0.28"
+  }
+}
