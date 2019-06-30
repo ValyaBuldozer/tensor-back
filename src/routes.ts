@@ -18,7 +18,7 @@ function routes(app: Application, dbConnection: DbConnection, userManager: UserM
 
         dbConnection.loginUser(username, password)
             .then(result => {
-                if (result) {
+                if (result && username && password) {
                     const token = userManager.loginUser(username);
                     res.cookie('token', token);
                     res.sendStatus(200);

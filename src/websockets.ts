@@ -2,6 +2,8 @@ import { server as webSocketServer, connection } from 'websocket';
 import UserManager from './UserManager';
 import UserConnection from './UserConnection';
 import Chat from './Chat';
+import Limiter from './limiter'
+
 
 function websockets(server, userManager: UserManager, chat: Chat) {
     const ws = new webSocketServer({

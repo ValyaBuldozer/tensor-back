@@ -13,10 +13,10 @@ app.use(express.static('static'));
 app.use('/', express.static(__dirname + 'statis'))
 
 const dbConnection = new DbConnection(),
-    chat = new Chat(),
+    chat = new Chat(dbConnection),
     userManager = new UserManager(dbConnection),
     route = routes(app, dbConnection, userManager);
 
-const httpServer = app.listen(5000);
+const httpServer = app.listen(5001);
 
 websockets(httpServer, userManager, chat);
